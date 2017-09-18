@@ -7,7 +7,7 @@
 <title>Corn Mazes</title>
 </head>
 <body>
-	<h3>States</h3>
+	<h2>Add Corn Maze</h2>
 	<form action="NewMaze.do" method="POST">
 		Name:
 		<input type="text" name="name" value="Maze Name"/><br/>
@@ -16,7 +16,7 @@
 		City: 
 		<input type="text" name="city" value="City"/><br/>
 		Map: 
-		<input type="text" name="url" value="Map url"/><br/>
+		<input type="text" name="url" value="https://pbs.twimg.com/profile_images/463936577946005504/Bgj5syYS.jpeg"/><br/>
 		<input type="submit" value="Add Maze" />
 	</form>
 </body>

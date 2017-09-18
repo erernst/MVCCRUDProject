@@ -1,7 +1,10 @@
 .thumbIMG{
 	height: 100px;
 	width: 100px;
-	
+}
+
+h2 {
+	color: white;
 }
 
 .IMG{
@@ -10,8 +13,20 @@
 
 div{
 	text-align: center;
+	color: white;
+	background-color:darkyellow;
 }
 
 body{
 	background-color:yellow;
+}
+form{
+	text-align: center;
+}
+body{
+	background-image:url("https://www.almanac.com/sites/default/files/styles/primary_image_in_article/public/images/ears_of_corn.jpg?itok=AAh_FWcU");
+}
+
+a {
+	color:white;
 }

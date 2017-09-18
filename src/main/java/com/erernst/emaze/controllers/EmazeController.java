@@ -15,11 +15,10 @@ import com.erernst.emaze.data.Emaze;
 import com.erernst.emaze.data.EmazeDAO;
 
 @Controller
-@SessionAttributes({"emaze"})
+
 public class EmazeController {
 	@Autowired
 	private EmazeDAO emazeDao;
-
 
 	public EmazeDAO getEmazeDao() {
 		return emazeDao;
@@ -40,24 +39,20 @@ public class EmazeController {
 		return "index.jsp";
 	}
 
-
-
 	@RequestMapping(path = "start.do", method = RequestMethod.GET)
 	public ModelAndView getMazes() {
-
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("mazelist.jsp");
-	
 		mv.addObject("mazes", emazeDao.getEmazes());
 		return mv;
 	}
 
 	@RequestMapping(path = "remove.do", method = RequestMethod.GET)
 	public ModelAndView removeMazes(@RequestParam("maze") String maze) {
-		System.out.println(maze );
-		Emaze emazeToRemove= null;
+		System.out.println(maze);
+		Emaze emazeToRemove = null;
 		for (Emaze emaze : emazeDao.getEmazes()) {
-			if(emaze.getName().equals(maze)){
+			if (emaze.getName().equals(maze)) {
 				emazeToRemove = emaze;
 			}
 		}
@@ -67,13 +62,12 @@ public class EmazeController {
 		mv.addObject("mazes", emazeDao.getEmazes());
 		return mv;
 	}
-	
+
 	@RequestMapping(path = "change.do", method = RequestMethod.GET)
 	public ModelAndView editMazeName(@RequestParam("name") String name) {
-
-		Emaze emazeToRemove= null;
+		Emaze emazeToRemove = null;
 		for (Emaze emaze : emazeDao.getEmazes()) {
-			if(emaze.getName().equals(name)){
+			if (emaze.getName().equals(name)) {
 				emazeToRemove = emaze;
 			}
 		}
@@ -113,24 +107,20 @@ public class EmazeController {
 		mv.setViewName("mazelist.jsp");
 		return mv;
 	}
-	
+
 	@RequestMapping(path = "editMaze.do", method = RequestMethod.POST)
-	public ModelAndView editMaze(@RequestParam("oldname") String oldname,@RequestParam("name") String name, @RequestParam("city") String city,
-			@RequestParam("state") String state, @RequestParam("url") String url) {
-		Emaze emazeToRemove= null;
+	public ModelAndView editMaze(@RequestParam("oldname") String oldname, @RequestParam("name") String name,
+			@RequestParam("city") String city, @RequestParam("state") String state, @RequestParam("url") String url) {
 		for (Emaze emaze : emazeDao.getEmazes()) {
-			if (emaze.getName().equals(oldname)){
-			emazeToRemove= emaze;}
-		}
-		emazeDao.removeEmaze(emazeToRemove);
-		int i =1;
-		for (Emaze emaze : emazeDao.getEmazes()) {
-			i = (emaze.getName().equals(name))? 0: i;
+			if (emaze.getName().equals(oldname)) {
+				emaze.setCity(city);
+				emaze.setState(state);
+				emaze.setName(name);
+				emaze.setCourse(url);
+				System.out.println(emaze);
+			}
 		}
 		ModelAndView mv = new ModelAndView();
-		if (i>0) {
-		Emaze emaze = new Emaze(name, city, state, url);
-		emazeDao.addEmaze(emaze);}
 		mv.addObject("mazes", emazeDao.getEmazes());
 		mv.setViewName("mazelist.jsp");
 		return mv;

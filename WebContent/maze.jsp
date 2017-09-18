@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="mastercss.css">
 </head>
 <body>
-	<h3>Corn Mazes</h3>
+	<h2>Corn Mazes</h2>
 	<link rel="stylesheet" href="mazes.css">
 </head>
 <body class="bodyclass">

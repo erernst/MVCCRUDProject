@@ -8,7 +8,8 @@
 <link rel="stylesheet" href="mazes.css">
 </head>
 <body>
-	<h3>List of Corn Mazes</h3>
+	<h2>List of Corn Mazes</h2>
+	<a href="newMaze.jsp">Add Maze</a>
 
 	<c:forEach items="${mazes}" var="maze">
 			<div><a href="view.do?maze=${maze.name}">${maze.name}</a><br/>
@@ -18,7 +19,6 @@
 	</c:forEach>
 
 	<br/>
-	<a href="newMaze.jsp">Add Maze</a>
 	</select>
 </body>
 </html>

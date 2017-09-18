@@ -40,10 +40,7 @@ public class EmazeDAOImpl implements EmazeDAO {
 		} catch (Exception e) {
 			System.err.println(e);
 		}
-		for (Emaze emaze : emazes) {
-
-			System.out.println(emaze);
-		}
+		
 	}
 
 	@Override

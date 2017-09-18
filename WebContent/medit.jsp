@@ -8,7 +8,7 @@
 
 </head>
 <body>
-  <h3>Corn Mazes</h3>
+  <h2>Corn Mazes</h2>
 <link rel="stylesheet" href="mastercss.css">
 </head>
 <body class="bodyclass">
@@ -16,7 +16,7 @@
 
   <form action="editMaze.do" method="POST">
 		Name of Maze to Edit:
-		<input type="text" name="oldname" placeholder="${maze.name}" readonly/><br/>
+		<input type="text" name="oldname" value="${maze.name}" readonly/><br/>
 		New Name:
 		<input type="text" name="name" value="${maze.name}"/><br/>
 		State:
