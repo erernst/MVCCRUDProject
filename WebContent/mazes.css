@@ -1,0 +1,17 @@
+.thumbIMG{
+	height: 100px;
+	width: 100px;
+	
+}
+
+.IMG{
+	width: 600px;
+}
+
+div{
+	text-align: center;
+}
+
+body{
+	background-color:yellow;
+}
