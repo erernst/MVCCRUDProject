@@ -1,9 +1,10 @@
 #top {
 	background-image:
 		url("http://www.sharecg.com/images/original/39657.jpg");
-	background-width: 100%;;
-	background-repeat: no-repeat;
 	padding-top: 1%;
+	background-size:cover;
+	width:100%;
+	
 }
 
 form {
@@ -12,6 +13,7 @@ form {
 }
 
 #title {
+	padding-left: 8px;
 	color: yellow;
 	font-weight: bold;
 	margin-right: 3%;

@@ -11,6 +11,7 @@
 <body>
 <div id="top">
 		<h1 id="title">Corn Mazes</h1>
+		<h3 id="title">Dedicated to Chris Bianchi for all of his inspiration he provides every day.</h3>
 		<marquee><img src="http://ccc2013.doomby.com/medias/images/male-runner.png" alt="[runner image here]" class="runner"></marquee>
 </div>
 <form action="start.do" method="GET">

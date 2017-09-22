@@ -16,6 +16,6 @@
 * I would also allow more information, and user feedback on the cornmazes.
 * I would clean up the edit method so it is more directly affecting the properties.
 
-##Stumbling Blocks
+## Stumbling Blocks
 * The main issues resulted from things in the edit, and remove taking longer than expected.
-*
+* I also initially had an edit method which really just replaced an old maze, rather than changing the properties.

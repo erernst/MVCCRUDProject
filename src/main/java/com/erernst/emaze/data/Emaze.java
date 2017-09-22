@@ -5,7 +5,7 @@ public class Emaze {
 	public String toString() {
 		return "Emaze [name=" + name + ", state=" + state + ", course=" + course + ", city=" + city + "]";
 	}
-
+	private int id;
 	private String name;
 	private String state;
 	private String course;
@@ -17,6 +17,14 @@ public class Emaze {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getCourse() {
