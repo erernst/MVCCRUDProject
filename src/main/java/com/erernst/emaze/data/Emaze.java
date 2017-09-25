@@ -51,8 +51,9 @@ public class Emaze {
 		this.city = city;
 	}
 
-	public Emaze(String name, String city, String state, String course) {
+	public Emaze(int id, String name, String city, String state, String course) {
 		super();
+		this.id = id;
 		this.name = name;
 		this.state = state;
 		this.course = course;

@@ -4,15 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public interface EmazeDAO {
-	public Emaze getEmazeByName(String name);
+	public Emaze getEmazeById(int id);
 
 
 	public void addEmaze(Emaze emaze);
 
-	public ArrayList<Emaze> getEmazes();
+	public List<Emaze> getEmazes();
 
-	public void removeEmaze(Emaze emaze);
+	public boolean removeEmaze(int id);
 
 	public void setEmazes(List emazes);
+
 
 }
